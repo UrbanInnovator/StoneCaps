@@ -4291,10 +4291,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _css_header_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/header.css */ "./src/css/header.css");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
 
 
-const Header = () => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null);
+
+const Header = ({
+  loggedIn,
+  setLoggedIn
+}) => {
+  const handleSubmit = event => {
+    event.preventDefault();
+    setLoggedIn(false);
+    window.localStorage.clear();
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "headclan"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    to: "/"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "StoneCaps")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    to: "/cart"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: "https://w7.pngwing.com/pngs/1008/303/png-transparent-shopping-cart-icon-product-return-shopping-cart-retail-supermarket-objects.png"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    to: "/shop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: "https://freeiconshop.com/wp-content/uploads/edd/shopping-bag-outline.png"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    id: "menu",
+    type: "button"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: "https://cdn-icons-png.flaticon.com/512/2801/2801909.png"
+  })), !loggedIn ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    to: "/login"
+  }, "Login/Register") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    id: "logout",
+    onClick: handleSubmit
+  }, "Logout"));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Header);
 
@@ -4499,7 +4531,7 @@ var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  backdrop-filter: blur(5px);\n}\n\n/* .bg {\n  background-image: url(\"../../StoneCapsImages/AboutUs1.jpg\");\n  filter: blur(8px);\n  -webkit-filter: blur(8px);\n  position: absolute;\n  height: 100%;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n} */\n\n* {\n  box-sizing: border-box;\n}\n\n#homediv {\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: space-around;\n}\n\n.twobox {\n  display:flex;\n  flex-direction: row;\n  justify-content: space-around;\n}\n\n#foundersquote {\n  text-align: justify;\n  border-radius:10px;\n  border:2px solid white;\n  background-color: rgba(128, 128, 128, 0);\n}\n\n\n", "",{"version":3,"sources":["webpack://./src/css/home.css"],"names":[],"mappings":"AAAA;EACE,yDAA2D;EAC3D,0BAA0B;AAC5B;;AAEA;;;;;;;;;GASG;;AAEH;EACE,sBAAsB;AACxB;;AAEA;EACE,YAAY;EACZ,sBAAsB;EACtB,mBAAmB;EACnB,6BAA6B;AAC/B;;AAEA;EACE,YAAY;EACZ,mBAAmB;EACnB,6BAA6B;AAC/B;;AAEA;EACE,mBAAmB;EACnB,kBAAkB;EAClB,sBAAsB;EACtB,wCAAwC;AAC1C","sourcesContent":["body {\n  background-image: url(\"../../StoneCapsImages/AboutUs1.jpg\");\n  backdrop-filter: blur(5px);\n}\n\n/* .bg {\n  background-image: url(\"../../StoneCapsImages/AboutUs1.jpg\");\n  filter: blur(8px);\n  -webkit-filter: blur(8px);\n  position: absolute;\n  height: 100%;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n} */\n\n* {\n  box-sizing: border-box;\n}\n\n#homediv {\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: space-around;\n}\n\n.twobox {\n  display:flex;\n  flex-direction: row;\n  justify-content: space-around;\n}\n\n#foundersquote {\n  text-align: justify;\n  border-radius:10px;\n  border:2px solid white;\n  background-color: rgba(128, 128, 128, 0);\n}\n\n\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") -webkit-filter;\n}\n\n/* .bg {\n  background-image: url(\"../../StoneCapsImages/AboutUs1.jpg\");\n  filter: blur(8px);\n  -webkit-filter: blur(8px);\n  position: absolute;\n  height: 100%;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n} */\n\n* {\n  box-sizing: border-box;\n}\n\n#homediv {\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: space-around;\n}\n\n.twobox {\n  display:flex;\n  flex-direction: row;\n  justify-content: space-around;\n}\n\n#foundersquote {\n  text-align: justify;\n  border-radius:10px;\n  border:2px solid white;\n  background-color: rgba(128, 128, 128, 0);\n}\n\n\n", "",{"version":3,"sources":["webpack://./src/css/home.css"],"names":[],"mappings":"AAAA;EACE,wEAA0E;AAC5E;;AAEA;;;;;;;;;GASG;;AAEH;EACE,sBAAsB;AACxB;;AAEA;EACE,YAAY;EACZ,sBAAsB;EACtB,mBAAmB;EACnB,6BAA6B;AAC/B;;AAEA;EACE,YAAY;EACZ,mBAAmB;EACnB,6BAA6B;AAC/B;;AAEA;EACE,mBAAmB;EACnB,kBAAkB;EAClB,sBAAsB;EACtB,wCAAwC;AAC1C","sourcesContent":["body {\n  background-image: url(\"../../StoneCapsImages/AboutUs1.jpg\") -webkit-filter;\n}\n\n/* .bg {\n  background-image: url(\"../../StoneCapsImages/AboutUs1.jpg\");\n  filter: blur(8px);\n  -webkit-filter: blur(8px);\n  position: absolute;\n  height: 100%;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n} */\n\n* {\n  box-sizing: border-box;\n}\n\n#homediv {\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: space-around;\n}\n\n.twobox {\n  display:flex;\n  flex-direction: row;\n  justify-content: space-around;\n}\n\n#foundersquote {\n  text-align: justify;\n  border-radius:10px;\n  border:2px solid white;\n  background-color: rgba(128, 128, 128, 0);\n}\n\n\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

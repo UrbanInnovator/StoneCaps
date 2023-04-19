@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:dev": "webpack -w --mode=development",
-    "seed:dev": "nodemon ./db/seed.js",
-    "seed": "node ./db/seed.js",
+    "seed:dev": "nodemon ./db/seedData.js",
+    "seed": "node ./db/seedData.js",
     "start:dev": "nodemon server.js",
     "start": "node server.js"
   },
@@ -34,6 +34,7 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
     "nodemon": "^2.0.22",
+    "pg": "^8.10.0",
     "postgresql": "^0.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
