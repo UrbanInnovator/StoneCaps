@@ -1,26 +1,31 @@
-.footclan {
+footer {
   position: fixed;
   left: 0;
   bottom: 0;
-  height: 20px;
   width: 100%;
-  background-color: navy;
+  margin: 0px;
+  padding: 0px;
+  background-color:  #01004a;
   color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
   text-align: center;
 }
 
 .foot {
-  width: 25px;
-  height: 25px;
-  background-color: navy;
+  width: 30px;
+  height: 30px;
+  background-color:  #01004a;
   margin: 8px;
-  
+  padding: 4px;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.foot:hover {
+  background-color: rgb(255, 255, 255);
 }
 
 .flink {
-  background-color: navy;
+  background-color:  #01004a;
   margin: 0px;
   padding: 0px;
 }
