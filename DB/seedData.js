@@ -49,7 +49,7 @@ const createTables = async () => {
             CREATE TABLE products (
                 id SERIAL PRIMARY KEY,
                 name varchar(255) UNIQUE NOT NULL,
-                description varchar(255) NOT NULL,
+                description varchar(400) NOT NULL,
                 "imageURL" varchar(255) NOT NULL,
                 price float NOT NULL
             );
@@ -118,27 +118,153 @@ const createInitialProducts = async() => {
     try {
         console.log('Creating initial products...')
         await createProduct({
-            name: "Yankees Hat", 
-            description: "a hat for yankees",
-            imageURL: "../StoneCapImages/NYHat.jpg",
+            name: "Beanie", 
+            description: "Your pet rock will be cozy and stylish in this hand-knitted beanie hat! The colorful yarn creates a playful look while keeping your rock's head warm. Your pet rock will look so cute, you'll want to snap a selfie with it and post it on Instagram. Who knows, it might even go viral!",
+            imageURL: "/StoneCapImages/Beanie.jpg",
+            price: 20.32
+        });
+        await createProduct({
+            name: "Big Guy Hat", 
+            description: "A hat for big guys!",
+            imageURL: "/StoneCapImages/BigGuyHat.jpg",
+            price: 19.07
+        });
+        await createProduct({
+            name: "Bowl Cut", 
+            description: "Give your pet rock the ultimate '90s throwback with this hilarious bowlcut wig. Perfect for a retro party or just a silly day at home, your rock will look like they just stepped out of a time machine. With this wig on, your rock will be the coolest kid on the block (or the coolest pet rock in the jar).",
+            imageURL: "/StoneCapImages/BowlCut.jpg",
+            price: 11.38
+        });
+        await createProduct({
+            name: "Bucket Hat", 
+            description: "Keep your pet rock cool and stylish with this classic bucket hat. Whether they're lounging by the pool or just soaking up the sun, this hat will keep your rock looking and feeling cool. Plus, with its simple and timeless design, this hat is sure to never go out of style.",
+            imageURL: "/StoneCapImages/BucketHat.jpg",
+            price: 5.00
+        });
+        await createProduct({
+            name: "Chicken Hat", 
+            description: "Is your pet rock feeling a little cooped up? Give them the gift of clucking joy with this hilarious chicken hat. Your rock can now strut around the house like a barnyard superstar, complete with feathers and a beak. It's the perfect way to add a little poultry pizzazz to your rock's day.",
+            imageURL: "/StoneCapImages/ChickenHat.jpg",
             price: 20.32
         });
         await createProduct({
             name: "Cowboy Hat", 
-            description: "a cowboy hat for rocks",
-            imageURL: "../StoneCapImages/Beanie.jpg",
+            description: "Giddy up, partner! Your pet rock can now channel their inner cowboy with this stylish cowboy hat. Whether they're rustling up some cattle or just relaxing on the range, this hat will make your rock feel like they're living their best wild west life. Yeehaw!",
+            imageURL: "/StoneCapImages/CowboyHat.jpg",
             price: 19.07
         });
         await createProduct({
-            name: "Storm Trooper Hat", 
-            description: "a hat for someone who can't hit a lazer",
-            imageURL: "../StoneCapImages/StormTrooperHelmet.jpg",
+            name: "Crown", 
+            description: "Bow down to the royalty of the pet rock world! This regal crown will give your pet rock the ultimate power and prestige. Perfect for ruling over their kingdom (i.e., your bookshelf), this crown will make your rock feel like a true king or queen. So, give your pet rock the gift of majesty and let them reign supreme with this stunning crown.",
+            imageURL: "/StoneCapImages/Crown.jpg",
             price: 11.38
         });
         await createProduct({
-            name: "Beanie", 
-            description: "a beanie for rocks",
-            imageURL: "../StoneCapImages/Beanie.jpg",
+            name: "Fancy Hat", 
+            description: "Time to dress up your pet rock's look with a touch of sophistication! This fancy hat will add a touch of class to your rock's wardrobe. Perfect for high tea, garden parties or just lounging in the living room, your rock will surely turn heads with this elegant headpiece.",
+            imageURL: "/StoneCapImages/FancyHat.jpg",
+            price: 5.00
+        });
+        await createProduct({
+            name: "Founders", 
+            description: "a hat for someone who can't hit a lazer",
+            imageURL: "/StoneCapImages/founders.jpg",
+            price: 11.38
+        });
+        await createProduct({
+            name: "Hero Mask", 
+            description: "Is your pet rock ready to save the day? With this hero mask, they'll feel like they can take on any challenge that comes their way. Whether they're fighting crime or just pretending to be a superhero, this mask will give your rock the courage and confidence they need to be a true champion.",
+            imageURL: "/StoneCapImages/HeroMask.jpg",
+            price: 5.00
+        });
+        await createProduct({
+            name: "Iron Man Mask", 
+            description: "Suit up your pet rock in this high-tech Iron Man mask and watch them become the ultimate superhero. With its sleek design and glowing eyes, this mask will make your rock feel like they're ready to take on any villain that comes their way. Whether they're fighting for justice or just showing off their cool new gear, your pet rock is sure to love this awesome Iron Man mask.",
+            imageURL: "/StoneCapImages/IronManMask.jpg",
+            price: 20.32
+        });
+        await createProduct({
+            name: "Knitted Beanie", 
+            description: "Keep your pet rock extra cozy and stylish with this handmade beanie. Each one is unique, and the craftsmanship will make your rock stand out from the crowd. Perfect for cold winter days or just lounging around the house, this beanie is the ultimate accessory for the fashion-forward pet rock.",
+            imageURL: "/StoneCapImages/KnittedBeanie.jpg",
+            price: 19.07
+        });
+        await createProduct({
+            name: "McDonalds Hat", 
+            description: "I'm lovin' it! Now your pet rock can work the drive-thru or grill up some burgers in style with this classic McDonald's hat. Complete with the iconic golden arches, this hat will make your rock the envy of every fast-food fan. Just make sure they don't try to eat it!",
+            imageURL: "/StoneCapImages/McDonaldsHat.jpg",
+            price: 11.38
+        });
+        await createProduct({
+            name: "Military Hat", 
+            description: "At ease, soldier! Your pet rock can now command their own army with this sleek and sturdy military hat. Whether they're leading the charge or just hanging out in the barracks, this hat will make your rock feel like a true general. So, give your rock the gift of leadership and discipline with this military-inspired headwear.",
+            imageURL: "/StoneCapImages/MilitaryHat.jpg",
+            price: 11.38
+        });
+        await createProduct({
+            name: "Mouse Ears", 
+            description: "Who says only cartoon mice get to have fun? Your pet rock can now channel their inner Disney with these iconic mouse ears. Perfect for a day at the theme park or just lounging around the house, these ears will make your rock the talk of the town (or the talk of the pet rock community, at least).",
+            imageURL: "/StoneCapImages/MouseEars.jpg",
+            price: 11.38
+        });
+        await createProduct({
+            name: "Yankee Hat", 
+            description: "Because even your pet rock deserves to be a Bronx Bomber. Now your rock can root for the Yankees with all the fervor of a die-hard fan, without ever having to worry about actually leaving the house.",
+            imageURL: "/StoneCapImages/NYHat.jpg",
+            price: 5.00
+        });
+        await createProduct({
+            name: "Old Timey Bonnet", 
+            description: "Give your pet rock a touch of vintage charm with this adorable old timey bonnet. Modeled after the headwear popularized in the 19th century, this bonnet will make your rock look like they just stepped out of a time machine. Perfect for a costume party or just for a fun addition to their wardrobe, this bonnet is sure to make your pet rock the talk of the town.",
+            imageURL: "/StoneCapImages/OldTimeyBonnet.jpg",
+            price: 20.32
+        });
+        await createProduct({
+            name: "Pirate Hat", 
+            description: "Ahoy, matey! Your pet rock can now be the most feared and stylish swashbuckler on the seven seas. Whether it's plundering treasure or just lounging on the couch, this hat is sure to make your rock feel like a true captain of the ship.",
+            imageURL: "/StoneCapImages/PirateHat.jpg",
+            price: 19.07
+        });
+        await createProduct({
+            name: "Pope Hat", 
+            description: "Bless your pet rock with this divine Pope hat. Modeled after the iconic headwear of the leader of the Catholic Church, this hat will give your pet rock a sense of piety and authority. Perfect for leading their own congregation of pet rocks or just for a humorous addition to their wardrobe, this hat is sure to inspire reverence in all who see it.",
+            imageURL: "/StoneCapImages/PopeHat.jpg",
+            price: 19.07
+        });
+        await createProduct({
+            name: "SciFiHat", 
+            description: "Blast off into outer space with this futuristic sci-fi helmet! Your pet rock will be ready to explore new galaxies and meet alien lifeforms with this sleek and high-tech helmet. Whether they're battling against the dark forces of the universe or just pretending to be an astronaut, this helmet is the perfect accessory for any space-loving pet rock.",
+            imageURL: "/StoneCapImages/SciFiHatjpg",
+            price: 11.38
+        });
+        await createProduct({
+            name: "Dr Seuss Hat", 
+            description: "Oh, the places your pet rock will go! With this iconic red and white striped hat, your rock can now explore the fantastical worlds of Dr. Seuss in style. From Who-ville to the Circus McGurkus, this hat is the perfect accessory for any adventurous rock looking to add a little whimsy to their day.",
+            imageURL: "/StoneCapImages/SeussHat.jpg",
+            price: 5.00
+        });
+        await createProduct({
+            name: "Snorkle Mask", 
+            description: "Take your pet rock on an underwater adventure with this snorkel mask. Whether they're exploring the depths of your fish tank or just pretending to be a deep-sea diver, this mask will give your rock a whole new perspective on the world. With its comfortable fit and functional design, your rock will be able to breathe easy and enjoy the wonders of the underwater world.",
+            imageURL: "/StoneCapImages/SnorkleMask.jpg",
+            price: 11.38
+        });
+        await createProduct({
+            name: "Storm Trooper Helmet", 
+            description: "Prepare your pet rock for battle with this iconic Stormtrooper helmet. Modeled after the famous headgear worn by the soldiers of the Galactic Empire, this helmet will give your pet rock a sense of power and purpose. Whether they're fighting for the Dark Side or just pretending to be a part of the Star Wars universe, this helmet is sure to be a hit with any sci-fi-loving pet rock.",
+            imageURL: "/StoneCapImages/StormTrooperHelmet.jpg",
+            price: 5.00
+        });
+        await createProduct({
+            name: "Straw Hat", 
+            description: "Add some rustic charm to your pet rock's wardrobe with this classic straw hat. Perfect for a day at the beach or just lounging in the sun, this hat will keep your rock cool and stylish. With its simple yet timeless design, this hat is sure to be a favorite of your pet rock's for years to come.",
+            imageURL: "/StoneCapImages/StrawHat.jpg",
+            price: 5.00
+        });
+        await createProduct({
+            name: "Witch Hat", 
+            description: "Add some magic to your pet rock's life with this enchanting witch hat. With its pointed design and iconic look, your pet rock will be ready to cast spells and brew potions in no time. Whether they're getting into the Halloween spirit or just showing off their mystical side, this witch hat is the perfect accessory for any spell-casting pet rock.",
+            imageURL: "/StoneCapImages/WitchHat.jpg",
             price: 5.00
         });
         console.log('Finished creating initial products...')
