@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Homemade+Apple');
+@import url('https://fonts.googleapis.com/css?family=Homemade+Apple');
+@import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');
+@import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display');
+
+html {
+  overflow:auto;
+  height: 100%;
+  padding-bottom: 70px;
+}
+
 body { 
   background: url("../../StoneCapsImages/AboutUs1.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -10,12 +21,61 @@ body {
   display:flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  font-family: 'Just Another Hand';
 }
 
 .twobox {
   display:flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  align-items: baseline;
+  margin-top: 50px;
 }
+
+#foundersquote {
+  text-align: justify;
+  border-radius:10px;
+  border:2.5px solid white;
+  color:white;
+  font-weight: lighter;
+  font-size:27px;
+  backdrop-filter: blur(4px);
+  margin-top:50px;
+  padding: 10px;
+}
+
+#foundersquote #quote {
+  font-family: 'Homemade Apple';
+  font-size: 18px;
+}
+
+.blurbs {
+  width:350px;
+  height: fit-content;
+  text-align: center;
+  font-size: 28px;
+  padding: 8px;
+  color:white;
+  backdrop-filter: blur(4px);
+  border: solid 2.5px white;
+  border-radius: 10px;
+}
+
+#story {
+  /* font-family:'Homemade Apple'; */
+  margin-right:55px;
+}
+
+#statement, #mission {
+  margin-left: 55px;
+}
+
+h3 {
+  font-family: 'Sedgwick Ave Display';
+  font-size:25px;
+  color:white;
+  font-weight: lighter;
+}
+
 
