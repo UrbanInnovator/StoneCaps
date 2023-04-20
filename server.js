@@ -3,7 +3,7 @@ const apiRouter = require('./api')
 const app = express();
 const PORT = 3000;
 const path = require("path")
-const client = require('./DB/index');
+const { client } = require('./DB/index');
 
 app.use("/dist", express.static(path.join(__dirname, 'dist')));
 
