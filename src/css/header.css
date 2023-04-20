@@ -1,0 +1,43 @@
+
+@import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display%27');
+
+
+#headclan{
+    display:flex;
+    justify-content: space-around;
+    border: 3px solid white;
+    align-items: center;
+
+}
+
+#cart{
+    width: 75px;
+}
+
+#shop{
+    width: 60px;
+    height:60px;
+    color:white;
+}
+
+#menu{
+    height:75px;
+    width:50px;
+    background:none;
+}
+
+#login{
+    padding:5px;
+    border:1px solid black;
+    border-radius: 5px;
+    margin-top:20px;
+    background-color:white;
+    margin-bottom:25px;
+    
+}
+
+#title{
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 10px;
+}
