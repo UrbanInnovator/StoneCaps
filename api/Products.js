@@ -3,7 +3,7 @@ const { getAllProducts } = require('../DB')
 const router = express.Router();
 
 
-//GET /api/activities 
+//GET /api/products
 router.get('/', async (req,res, next)=> {
     try{
         const products = await getAllProducts();
