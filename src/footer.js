@@ -6,9 +6,9 @@ const Footer = () => {
   return(
     <div id='footclan'>
       <footer>
-        <Link to="https://twitter.com/" target="_blank" className="flink"><img src="https://img.freepik.com/free-icon/twitter_318-674515.jpg" className="foot"/></Link>
-        <Link to="https://www.instagram.com/snp2k21/" target="_blank" className="flink"><img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-icon-png-image_6315974.png" className="foot"/></Link>
-        <Link to="https://www.facebook.com/" target="_blank" className="flink"><img src="https://i.pinimg.com/originals/ce/d6/6e/ced66ecfc53814d71f8774789b55cc76.png" className="foot"/></Link>
+        <Link to="https://twitter.com/KidRock" target="_blank" className="flink"><img src="https://img.freepik.com/free-icon/twitter_318-674515.jpg" className="foot"/></Link>
+        <Link to="https://www.instagram.com/therock/" target="_blank" className="flink"><img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-icon-png-image_6315974.png" className="foot"/></Link>
+        <Link to="https://www.facebook.com/SylvesterStallone" target="_blank" className="flink"><img src="https://i.pinimg.com/originals/ce/d6/6e/ced66ecfc53814d71f8774789b55cc76.png" className="foot"/></Link>
       </footer>
     </div>
   )
