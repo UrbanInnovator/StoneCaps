@@ -4355,15 +4355,21 @@ const Home = () => {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "foundersquote",
     className: "bg-text"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "\"It's a HARD life being a ROCK\""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Co-Founders Dwayne \"The Rock\" Johnson & Rockey Balboa")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "twobox"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    id: "quote"
+  }, "\"It's a HARD life being a ROCK\" - "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Co-Founders Dwayne \"The Rock\" Johnson & Rocky Balboa")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "twobox"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+    id: "found"
+  }, "Founder's Story"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     id: "story",
     className: "blurbs"
-  }, "Made it out the mud. Been living the hard life since we were pebbles. Love all our rocks and want them to shine, fresh out the mud."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, "We made it out the mud together, living the hard life since we were pebbles. Love all our rocks and want them to shine, fresh out the mud & never returning. Spreading love & positivity to all.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+    id: "mission"
+  }, "Mission Statement"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     id: "statement",
     className: "blurbs"
-  }, "Making sure all my rocks, pebbles, and stones stay shining & dripping"))));
+  }, "We stay committed to keeping everyone thriving & shining. Despite the hardships we endured as pebbles, we fought through. We want to pass that same hope & confidence forward. Stay shining & dripping")))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);
 
@@ -4473,7 +4479,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "footer {\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  margin: 0px;\n  padding: 0px;\n  background-color:  #01004a;\n  color: white;\n  text-align: center;\n}\n\n.foot {\n  width: 30px;\n  height: 30px;\n  background-color:  #01004a;\n  margin: 8px;\n  padding: 4px;\n  border: 2px solid white;\n  border-radius: 10px;\n}\n\n.foot:hover {\n  background-color: rgb(255, 255, 255);\n}\n\n.flink {\n  background-color:  #01004a;\n  margin: 0px;\n  padding: 0px;\n}\n\n", "",{"version":3,"sources":["webpack://./src/css/footer.css"],"names":[],"mappings":"AAAA;EACE,eAAe;EACf,OAAO;EACP,SAAS;EACT,WAAW;EACX,WAAW;EACX,YAAY;EACZ,0BAA0B;EAC1B,YAAY;EACZ,kBAAkB;AACpB;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,0BAA0B;EAC1B,WAAW;EACX,YAAY;EACZ,uBAAuB;EACvB,mBAAmB;AACrB;;AAEA;EACE,oCAAoC;AACtC;;AAEA;EACE,0BAA0B;EAC1B,WAAW;EACX,YAAY;AACd","sourcesContent":["footer {\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  margin: 0px;\n  padding: 0px;\n  background-color:  #01004a;\n  color: white;\n  text-align: center;\n}\n\n.foot {\n  width: 30px;\n  height: 30px;\n  background-color:  #01004a;\n  margin: 8px;\n  padding: 4px;\n  border: 2px solid white;\n  border-radius: 10px;\n}\n\n.foot:hover {\n  background-color: rgb(255, 255, 255);\n}\n\n.flink {\n  background-color:  #01004a;\n  margin: 0px;\n  padding: 0px;\n}\n\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "footer {\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  margin: 0px;\n  padding: 0px;\n  background-color:  #493829;\n  color: white;\n  text-align: center;\n}\n\n.foot {\n  width: 30px;\n  height: 30px;\n  background-color:  #493829;\n  margin: 8px;\n  padding: 4px;\n  border: 2px solid white;\n  border-radius: 10px;\n}\n\n.foot:hover {\n  background-color: #c4a389;\n}\n\n.flink {\n  background-color:  #493829;\n  margin: 0px;\n  padding: 0px;\n}\n\n", "",{"version":3,"sources":["webpack://./src/css/footer.css"],"names":[],"mappings":"AAAA;EACE,eAAe;EACf,OAAO;EACP,SAAS;EACT,WAAW;EACX,WAAW;EACX,YAAY;EACZ,0BAA0B;EAC1B,YAAY;EACZ,kBAAkB;AACpB;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,0BAA0B;EAC1B,WAAW;EACX,YAAY;EACZ,uBAAuB;EACvB,mBAAmB;AACrB;;AAEA;EACE,yBAAyB;AAC3B;;AAEA;EACE,0BAA0B;EAC1B,WAAW;EACX,YAAY;AACd","sourcesContent":["footer {\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  margin: 0px;\n  padding: 0px;\n  background-color:  #493829;\n  color: white;\n  text-align: center;\n}\n\n.foot {\n  width: 30px;\n  height: 30px;\n  background-color:  #493829;\n  margin: 8px;\n  padding: 4px;\n  border: 2px solid white;\n  border-radius: 10px;\n}\n\n.foot:hover {\n  background-color: #c4a389;\n}\n\n.flink {\n  background-color:  #493829;\n  margin: 0px;\n  padding: 0px;\n}\n\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4526,11 +4532,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../StoneCapsImages/founders.jpg */ "./StoneCapsImages/founders.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../StoneCapsImages/AboutUs1.jpg */ "./StoneCapsImages/AboutUs1.jpg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Homemade+Apple);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Homemade+Apple);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Just+Another+Hand);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display);"]);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "html, body {\n  margin:0;\n  height:100%;\n  /* overflow:hidden; */\n}\n\n.bg-container {\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  width:100%;\n  height:100vh;\n  background-size:cover;\n  background-repeat:no-repeat;\n  background-position:center center;\n}\n\n#homediv {\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: space-around;\n}\n\n.twobox {\n  display:flex;\n  flex-direction: row;\n  justify-content: space-evenly;\n  align-items: baseline;\n}\n\n#foundersquote {\n  text-align: justify;\n  border-radius:10px;\n  border:2.5px solid white;\n  backdrop-filter: blur(4px);\n}\n\n.blurbs {\n  width:300px;\n  height: fit-content;\n  text-align: center;\n  font-size: 20px;\n  margin:30px;\n  padding: 8px;\n  backdrop-filter: blur(4px);\n  border: solid 2.5px white;\n  border-radius: 10px;\n}\n\n\n", "",{"version":3,"sources":["webpack://./src/css/home.css"],"names":[],"mappings":"AAAA;EACE,QAAQ;EACR,WAAW;EACX,qBAAqB;AACvB;;AAEA;EACE,yDAA2D;EAC3D,UAAU;EACV,YAAY;EACZ,qBAAqB;EACrB,2BAA2B;EAC3B,iCAAiC;AACnC;;AAEA;EACE,YAAY;EACZ,sBAAsB;EACtB,mBAAmB;EACnB,6BAA6B;AAC/B;;AAEA;EACE,YAAY;EACZ,mBAAmB;EACnB,6BAA6B;EAC7B,qBAAqB;AACvB;;AAEA;EACE,mBAAmB;EACnB,kBAAkB;EAClB,wBAAwB;EACxB,0BAA0B;AAC5B;;AAEA;EACE,WAAW;EACX,mBAAmB;EACnB,kBAAkB;EAClB,eAAe;EACf,WAAW;EACX,YAAY;EACZ,0BAA0B;EAC1B,yBAAyB;EACzB,mBAAmB;AACrB","sourcesContent":["html, body {\n  margin:0;\n  height:100%;\n  /* overflow:hidden; */\n}\n\n.bg-container {\n  background-image: url(\"../../StoneCapsImages/founders.jpg\");\n  width:100%;\n  height:100vh;\n  background-size:cover;\n  background-repeat:no-repeat;\n  background-position:center center;\n}\n\n#homediv {\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: space-around;\n}\n\n.twobox {\n  display:flex;\n  flex-direction: row;\n  justify-content: space-evenly;\n  align-items: baseline;\n}\n\n#foundersquote {\n  text-align: justify;\n  border-radius:10px;\n  border:2.5px solid white;\n  backdrop-filter: blur(4px);\n}\n\n.blurbs {\n  width:300px;\n  height: fit-content;\n  text-align: center;\n  font-size: 20px;\n  margin:30px;\n  padding: 8px;\n  backdrop-filter: blur(4px);\n  border: solid 2.5px white;\n  border-radius: 10px;\n}\n\n\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "html {\n  overflow:auto;\n  height: 100%;\n  padding-bottom: 70px;\n}\n\nbody { \n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") no-repeat center center fixed; \n  -webkit-background-size: cover;\n  -moz-background-size: cover;\n  -o-background-size: cover;\n  background-size: cover;\n}\n\n#homediv {\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: space-around;\n  font-family: 'Just Another Hand';\n}\n\n.twobox {\n  display:flex;\n  flex-direction: row;\n  justify-content: space-evenly;\n  align-items: baseline;\n  margin-top: 50px;\n}\n\n#foundersquote {\n  text-align: justify;\n  border-radius:10px;\n  border:2.5px solid white;\n  color:white;\n  font-weight: lighter;\n  font-size:27px;\n  backdrop-filter: blur(4px);\n  margin-top:50px;\n  padding: 10px;\n}\n\n#foundersquote #quote {\n  font-family: 'Homemade Apple';\n  font-size: 18px;\n}\n\n.blurbs {\n  width:350px;\n  height: fit-content;\n  text-align: center;\n  font-size: 28px;\n  padding: 8px;\n  color:white;\n  backdrop-filter: blur(4px);\n  border: solid 2.5px white;\n  border-radius: 10px;\n}\n\n#story {\n  /* font-family:'Homemade Apple'; */\n  margin-right:55px;\n}\n\n#statement, #mission {\n  margin-left: 55px;\n}\n\nh3 {\n  font-family: 'Sedgwick Ave Display';\n  font-size:25px;\n  color:white;\n  font-weight: lighter;\n}\n\n\n", "",{"version":3,"sources":["webpack://./src/css/home.css"],"names":[],"mappings":"AAKA;EACE,aAAa;EACb,YAAY;EACZ,oBAAoB;AACtB;;AAEA;EACE,iFAAmF;EACnF,8BAA8B;EAC9B,2BAA2B;EAC3B,yBAAyB;EACzB,sBAAsB;AACxB;;AAEA;EACE,YAAY;EACZ,sBAAsB;EACtB,mBAAmB;EACnB,6BAA6B;EAC7B,gCAAgC;AAClC;;AAEA;EACE,YAAY;EACZ,mBAAmB;EACnB,6BAA6B;EAC7B,qBAAqB;EACrB,gBAAgB;AAClB;;AAEA;EACE,mBAAmB;EACnB,kBAAkB;EAClB,wBAAwB;EACxB,WAAW;EACX,oBAAoB;EACpB,cAAc;EACd,0BAA0B;EAC1B,eAAe;EACf,aAAa;AACf;;AAEA;EACE,6BAA6B;EAC7B,eAAe;AACjB;;AAEA;EACE,WAAW;EACX,mBAAmB;EACnB,kBAAkB;EAClB,eAAe;EACf,YAAY;EACZ,WAAW;EACX,0BAA0B;EAC1B,yBAAyB;EACzB,mBAAmB;AACrB;;AAEA;EACE,kCAAkC;EAClC,iBAAiB;AACnB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,mCAAmC;EACnC,cAAc;EACd,WAAW;EACX,oBAAoB;AACtB","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Homemade+Apple');\n@import url('https://fonts.googleapis.com/css?family=Homemade+Apple');\n@import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');\n@import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display');\n\nhtml {\n  overflow:auto;\n  height: 100%;\n  padding-bottom: 70px;\n}\n\nbody { \n  background: url(\"../../StoneCapsImages/AboutUs1.jpg\") no-repeat center center fixed; \n  -webkit-background-size: cover;\n  -moz-background-size: cover;\n  -o-background-size: cover;\n  background-size: cover;\n}\n\n#homediv {\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: space-around;\n  font-family: 'Just Another Hand';\n}\n\n.twobox {\n  display:flex;\n  flex-direction: row;\n  justify-content: space-evenly;\n  align-items: baseline;\n  margin-top: 50px;\n}\n\n#foundersquote {\n  text-align: justify;\n  border-radius:10px;\n  border:2.5px solid white;\n  color:white;\n  font-weight: lighter;\n  font-size:27px;\n  backdrop-filter: blur(4px);\n  margin-top:50px;\n  padding: 10px;\n}\n\n#foundersquote #quote {\n  font-family: 'Homemade Apple';\n  font-size: 18px;\n}\n\n.blurbs {\n  width:350px;\n  height: fit-content;\n  text-align: center;\n  font-size: 28px;\n  padding: 8px;\n  color:white;\n  backdrop-filter: blur(4px);\n  border: solid 2.5px white;\n  border-radius: 10px;\n}\n\n#story {\n  /* font-family:'Homemade Apple'; */\n  margin-right:55px;\n}\n\n#statement, #mission {\n  margin-left: 55px;\n}\n\nh3 {\n  font-family: 'Sedgwick Ave Display';\n  font-size:25px;\n  color:white;\n  font-weight: lighter;\n}\n\n\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -41100,13 +41110,13 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ "./StoneCapsImages/founders.jpg":
+/***/ "./StoneCapsImages/AboutUs1.jpg":
 /*!**************************************!*\
-  !*** ./StoneCapsImages/founders.jpg ***!
+  !*** ./StoneCapsImages/AboutUs1.jpg ***!
   \**************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "74456ab795d9de9706d1.jpg";
+module.exports = __webpack_require__.p + "db0b5422085dc943f499.jpg";
 
 /***/ })
 

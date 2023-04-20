@@ -5,7 +5,7 @@ footer {
   width: 100%;
   margin: 0px;
   padding: 0px;
-  background-color:  #01004a;
+  background-color:  #493829;
   color: white;
   text-align: center;
 }
@@ -13,7 +13,7 @@ footer {
 .foot {
   width: 30px;
   height: 30px;
-  background-color:  #01004a;
+  background-color:  #493829;
   margin: 8px;
   padding: 4px;
   border: 2px solid white;
@@ -21,11 +21,11 @@ footer {
 }
 
 .foot:hover {
-  background-color: rgb(255, 255, 255);
+  background-color: #c4a389;
 }
 
 .flink {
-  background-color:  #01004a;
+  background-color:  #493829;
   margin: 0px;
   padding: 0px;
 }

@@ -7,14 +7,22 @@ const Home = () => {
     <>
       <div id='homediv' className="bg-container">
         <div id="foundersquote" className="bg-text">
-          <p>"It's a HARD life being a ROCK"</p>
-          <p>Co-Founders Dwayne "The Rock" Johnson & Rockey Balboa</p>
+          <p id='quote'>"It's a HARD life being a ROCK" - </p>
+          <p>Co-Founders Dwayne "The Rock" Johnson & Rocky Balboa</p>
         </div>
         <div className='twobox'>
-          <p id='story' className="blurbs">Made it out the mud. Been living the hard life since 
-          we were pebbles. Love all our rocks and want them to shine, fresh out the mud.</p>
-          <p id='statement' className='blurbs'>Making sure all my rocks, pebbles, and stones
-          stay shining & dripping</p>
+          <div>
+            <h3 id='found'>Founder's Story</h3>
+            <p id='story' className="blurbs">We made it out the mud together, living the hard life since 
+            we were pebbles. Love all our rocks and want them to shine, fresh out the mud & never returning. Spreading
+            love & positivity to all.</p>
+          </div>
+          <div>
+            <h3 id='mission'>Mission Statement</h3>
+            <p id='statement' className='blurbs'>We stay committed to keeping everyone thriving & shining.
+          Despite the hardships we endured as pebbles, we fought through. We want to pass that same hope & confidence forward.
+          Stay shining & dripping</p>
+          </div>
         </div>
       </div>
     </>
