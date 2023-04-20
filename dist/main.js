@@ -4244,32 +4244,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _css_footer_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/footer.css */ "./src/css/footer.css");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+
 
 
 const Footer = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "footclan"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("footer", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://twitter.com/",
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("footer", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    to: "https://twitter.com/",
     target: "_blank",
-    class: "flink"
+    className: "flink"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     src: "https://img.freepik.com/free-icon/twitter_318-674515.jpg",
-    class: "foot"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://www.instagram.com/snp2k21/",
+    className: "foot"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    to: "https://www.instagram.com/snp2k21/",
     target: "_blank",
-    class: "flink"
+    className: "flink"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     src: "https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-icon-png-image_6315974.png",
-    class: "foot"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://www.facebook.com/",
+    className: "foot"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    to: "https://www.facebook.com/",
     target: "_blank",
-    class: "flink"
+    className: "flink"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     src: "https://i.pinimg.com/originals/ce/d6/6e/ced66ecfc53814d71f8774789b55cc76.png",
-    class: "foot"
+    className: "foot"
   }))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);
@@ -4347,21 +4349,27 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const Home = () => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "homediv"
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "homediv",
+    className: "bg-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "foundersquote",
+    className: "bg-text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "foundersquote"
-  }, "\"It's a HARD life being a ROCK\""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "foundersquote"
-  }, "Co-Founders Dwayne \"The Rock\" Johnson & Rockey Balboa"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "quote"
+  }, "\"It's a HARD life being a ROCK\" - "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Co-Founders Dwayne \"The Rock\" Johnson & Rocky Balboa")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "twobox"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "storystate",
-    id: "story"
-  }, "Made it out the mud. Been living the hard life since we were pebbles. Love all our rocks and want them to shine, fresh out the mud."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "storystate",
-    id: "statement"
-  }, "Making sure all my rocks, pebbles, and stones stay shining & dripping")));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+    id: "found"
+  }, "Founder's Story"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    id: "story",
+    className: "blurbs"
+  }, "We made it out the mud together, living the hard life since we were pebbles. Love all our rocks and want them to shine, fresh out the mud & never returning. Spreading love & positivity to all.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+    id: "mission"
+  }, "Mission Statement"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    id: "statement",
+    className: "blurbs"
+  }, "We stay committed to keeping everyone thriving & shining. Despite the hardships we endured as pebbles, we fought through. We want to pass that same hope & confidence forward. Stay shining & dripping")))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);
 
@@ -4471,7 +4479,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".footclan {\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  height: 20px;\n  width: 100%;\n  background-color: navy;\n  color: white;\n  padding-top: 10px;\n  padding-bottom: 10px;\n  text-align: center;\n}\n\n.foot {\n  width: 25px;\n  height: 25px;\n  background-color: navy;\n  margin: 8px;\n  \n}\n\n.flink {\n  background-color: navy;\n  margin: 0px;\n  padding: 0px;\n}\n\n", "",{"version":3,"sources":["webpack://./src/css/footer.css"],"names":[],"mappings":"AAAA;EACE,eAAe;EACf,OAAO;EACP,SAAS;EACT,YAAY;EACZ,WAAW;EACX,sBAAsB;EACtB,YAAY;EACZ,iBAAiB;EACjB,oBAAoB;EACpB,kBAAkB;AACpB;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,sBAAsB;EACtB,WAAW;;AAEb;;AAEA;EACE,sBAAsB;EACtB,WAAW;EACX,YAAY;AACd","sourcesContent":[".footclan {\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  height: 20px;\n  width: 100%;\n  background-color: navy;\n  color: white;\n  padding-top: 10px;\n  padding-bottom: 10px;\n  text-align: center;\n}\n\n.foot {\n  width: 25px;\n  height: 25px;\n  background-color: navy;\n  margin: 8px;\n  \n}\n\n.flink {\n  background-color: navy;\n  margin: 0px;\n  padding: 0px;\n}\n\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "footer {\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  margin: 0px;\n  padding: 0px;\n  background-color:  #493829;\n  color: white;\n  text-align: center;\n}\n\n.foot {\n  width: 30px;\n  height: 30px;\n  background-color:  #493829;\n  margin: 8px;\n  padding: 4px;\n  border: 2px solid white;\n  border-radius: 10px;\n}\n\n.foot:hover {\n  background-color: #c4a389;\n}\n\n.flink {\n  background-color:  #493829;\n  margin: 0px;\n  padding: 0px;\n}\n\n", "",{"version":3,"sources":["webpack://./src/css/footer.css"],"names":[],"mappings":"AAAA;EACE,eAAe;EACf,OAAO;EACP,SAAS;EACT,WAAW;EACX,WAAW;EACX,YAAY;EACZ,0BAA0B;EAC1B,YAAY;EACZ,kBAAkB;AACpB;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,0BAA0B;EAC1B,WAAW;EACX,YAAY;EACZ,uBAAuB;EACvB,mBAAmB;AACrB;;AAEA;EACE,yBAAyB;AAC3B;;AAEA;EACE,0BAA0B;EAC1B,WAAW;EACX,YAAY;AACd","sourcesContent":["footer {\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  margin: 0px;\n  padding: 0px;\n  background-color:  #493829;\n  color: white;\n  text-align: center;\n}\n\n.foot {\n  width: 30px;\n  height: 30px;\n  background-color:  #493829;\n  margin: 8px;\n  padding: 4px;\n  border: 2px solid white;\n  border-radius: 10px;\n}\n\n.foot:hover {\n  background-color: #c4a389;\n}\n\n.flink {\n  background-color:  #493829;\n  margin: 0px;\n  padding: 0px;\n}\n\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4526,9 +4534,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../StoneCapsImages/AboutUs1.jpg */ "./StoneCapsImages/AboutUs1.jpg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Homemade+Apple);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Homemade+Apple);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Just+Another+Hand);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display);"]);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body { \n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") no-repeat center center fixed; \n  -webkit-background-size: cover;\n  -moz-background-size: cover;\n  -o-background-size: cover;\n  background-size: cover;\n}\n\n#homediv {\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}\n\n.twobox {\n  display:flex;\n  flex-direction: row;\n  justify-content: space-around;\n}\n\n", "",{"version":3,"sources":["webpack://./src/css/home.css"],"names":[],"mappings":"AAAA;EACE,iFAAmF;EACnF,8BAA8B;EAC9B,2BAA2B;EAC3B,yBAAyB;EACzB,sBAAsB;AACxB;;AAEA;EACE,YAAY;EACZ,sBAAsB;EACtB,mBAAmB;EACnB,uBAAuB;AACzB;;AAEA;EACE,YAAY;EACZ,mBAAmB;EACnB,6BAA6B;AAC/B","sourcesContent":["body { \n  background: url(\"../../StoneCapsImages/AboutUs1.jpg\") no-repeat center center fixed; \n  -webkit-background-size: cover;\n  -moz-background-size: cover;\n  -o-background-size: cover;\n  background-size: cover;\n}\n\n#homediv {\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}\n\n.twobox {\n  display:flex;\n  flex-direction: row;\n  justify-content: space-around;\n}\n\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "html {\n  overflow:auto;\n  height: 100%;\n  padding-bottom: 70px;\n}\n\nbody { \n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") no-repeat center center fixed; \n  -webkit-background-size: cover;\n  -moz-background-size: cover;\n  -o-background-size: cover;\n  background-size: cover;\n}\n\n#homediv {\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: space-around;\n  font-family: 'Just Another Hand';\n}\n\n.twobox {\n  display:flex;\n  flex-direction: row;\n  justify-content: space-evenly;\n  align-items: baseline;\n  margin-top: 50px;\n}\n\n#foundersquote {\n  text-align: justify;\n  border-radius:10px;\n  border:2.5px solid white;\n  color:white;\n  font-weight: lighter;\n  font-size:27px;\n  backdrop-filter: blur(4px);\n  margin-top:50px;\n  padding: 10px;\n}\n\n#foundersquote #quote {\n  font-family: 'Homemade Apple';\n  font-size: 18px;\n}\n\n.blurbs {\n  width:350px;\n  height: fit-content;\n  text-align: center;\n  font-size: 28px;\n  padding: 8px;\n  color:white;\n  backdrop-filter: blur(4px);\n  border: solid 2.5px white;\n  border-radius: 10px;\n}\n\n#story {\n  /* font-family:'Homemade Apple'; */\n  margin-right:55px;\n}\n\n#statement, #mission {\n  margin-left: 55px;\n}\n\nh3 {\n  font-family: 'Sedgwick Ave Display';\n  font-size:25px;\n  color:white;\n  font-weight: lighter;\n}\n\n\n", "",{"version":3,"sources":["webpack://./src/css/home.css"],"names":[],"mappings":"AAKA;EACE,aAAa;EACb,YAAY;EACZ,oBAAoB;AACtB;;AAEA;EACE,iFAAmF;EACnF,8BAA8B;EAC9B,2BAA2B;EAC3B,yBAAyB;EACzB,sBAAsB;AACxB;;AAEA;EACE,YAAY;EACZ,sBAAsB;EACtB,mBAAmB;EACnB,6BAA6B;EAC7B,gCAAgC;AAClC;;AAEA;EACE,YAAY;EACZ,mBAAmB;EACnB,6BAA6B;EAC7B,qBAAqB;EACrB,gBAAgB;AAClB;;AAEA;EACE,mBAAmB;EACnB,kBAAkB;EAClB,wBAAwB;EACxB,WAAW;EACX,oBAAoB;EACpB,cAAc;EACd,0BAA0B;EAC1B,eAAe;EACf,aAAa;AACf;;AAEA;EACE,6BAA6B;EAC7B,eAAe;AACjB;;AAEA;EACE,WAAW;EACX,mBAAmB;EACnB,kBAAkB;EAClB,eAAe;EACf,YAAY;EACZ,WAAW;EACX,0BAA0B;EAC1B,yBAAyB;EACzB,mBAAmB;AACrB;;AAEA;EACE,kCAAkC;EAClC,iBAAiB;AACnB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,mCAAmC;EACnC,cAAc;EACd,WAAW;EACX,oBAAoB;AACtB","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Homemade+Apple');\n@import url('https://fonts.googleapis.com/css?family=Homemade+Apple');\n@import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');\n@import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display');\n\nhtml {\n  overflow:auto;\n  height: 100%;\n  padding-bottom: 70px;\n}\n\nbody { \n  background: url(\"../../StoneCapsImages/AboutUs1.jpg\") no-repeat center center fixed; \n  -webkit-background-size: cover;\n  -moz-background-size: cover;\n  -o-background-size: cover;\n  background-size: cover;\n}\n\n#homediv {\n  display:flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: space-around;\n  font-family: 'Just Another Hand';\n}\n\n.twobox {\n  display:flex;\n  flex-direction: row;\n  justify-content: space-evenly;\n  align-items: baseline;\n  margin-top: 50px;\n}\n\n#foundersquote {\n  text-align: justify;\n  border-radius:10px;\n  border:2.5px solid white;\n  color:white;\n  font-weight: lighter;\n  font-size:27px;\n  backdrop-filter: blur(4px);\n  margin-top:50px;\n  padding: 10px;\n}\n\n#foundersquote #quote {\n  font-family: 'Homemade Apple';\n  font-size: 18px;\n}\n\n.blurbs {\n  width:350px;\n  height: fit-content;\n  text-align: center;\n  font-size: 28px;\n  padding: 8px;\n  color:white;\n  backdrop-filter: blur(4px);\n  border: solid 2.5px white;\n  border-radius: 10px;\n}\n\n#story {\n  /* font-family:'Homemade Apple'; */\n  margin-right:55px;\n}\n\n#statement, #mission {\n  margin-left: 55px;\n}\n\nh3 {\n  font-family: 'Sedgwick Ave Display';\n  font-size:25px;\n  color:white;\n  font-weight: lighter;\n}\n\n\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -41285,7 +41297,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(window.localStorage.getItem('token'));
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_header__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
     path: "/",
     element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_home__WEBPACK_IMPORTED_MODULE_4__["default"], null)
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
