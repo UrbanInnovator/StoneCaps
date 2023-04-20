@@ -24,6 +24,10 @@
   "homepage": "https://github.com/TheMatrixs/StoneCaps#readme",
   "dependencies": {
     "@babel/preset-react": "^7.18.6",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-regular-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "axios": "^1.3.5",
     "babel-loader": "^9.1.2",
     "bcrypt": "^5.1.0",
