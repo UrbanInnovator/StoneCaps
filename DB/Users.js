@@ -1,4 +1,4 @@
-const {client} = require("./index.js");
+const { client } = require("./index.js");
 
 const createUser = async ({
     username,
@@ -12,7 +12,7 @@ const createUser = async ({
         ON CONFLICT (username) DO NOTHING
         RETURNING *;
     `, [username, password, isAdmin])
-    return user;
+        return user;
     } catch (error) {
         throw error;
     }
@@ -30,4 +30,65 @@ const getAllUsers = async () => {
     }
 }
 
-module.exports = {createUser, getAllUsers};
+const getUser = async (username, password) => {
+    if (!username || !password) {
+        return;
+    }
+    try {
+        const user = await getUserByUsername(username);
+        // const matchPasswords = await bcrypt.compare(password, user.password);
+
+        if (!user) {
+            return;
+        }
+        // if (!matchPasswords) {
+        //     return;
+        // }
+        delete user.password;
+        return user;
+    } catch (error) {
+        throw error;
+    }
+}
+
+const getUserById = async (userId) => {
+    try {
+        const { rows: [user] } = await client.query(`
+            SELECT *
+            FROM users
+            WHERE id=${userId}`);
+
+        if (!user) {
+            return null
+        }
+        delete user.password;
+        return user;
+    } catch (error) {
+        throw error;
+    }
+}
+
+const getUserByUsername = async (username) => {
+    try {
+        const { rows : [user]} = await client.query(`
+            SELECT *
+            FROM users
+            WHERE username=$1`, [username]);
+
+    if(!user){
+      return null;
+    }
+    delete user.password;
+    return user;
+    } catch (error) {
+        throw error;
+    }
+}
+
+module.exports = { 
+    createUser, 
+    getAllUsers,
+    getUser,
+    getUserById,
+    getUserByUsername
+};
