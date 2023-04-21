@@ -12,7 +12,6 @@ import './css/app.css';
 
 
 const App = () => {
-  const [ isLoggedIn, setIsLoggedIn ] = useState(window.localStorage.getItem('token'));
 
   return (
     <div id="app">
@@ -22,7 +21,7 @@ const App = () => {
           <Route path='/shop' element={<Shop/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/cart' element={<MyCart/>}/>
-          <Route path='/product' element={<Product/>}/>
+          <Route path='/productId' element={<Product/>}/>
         </Routes>
       <Footer />
     </div>

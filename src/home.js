@@ -1,8 +1,10 @@
 // Home | About Us Page
-import React from "react";
+import React, { useState } from "react";
 import './css/home.css';
 
 const Home = () => {
+  const [ isLoggedIn, setIsLoggedIn ] = useState(window.localStorage.getItem('token'));
+
   return(
     <>
       <div id='homediv' className="bg-container">

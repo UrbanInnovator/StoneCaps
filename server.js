@@ -5,6 +5,8 @@ const PORT = 3000;
 const path = require("path");
 const { client } = require('./DB/index');
 
+app.use('/StoneCapImages', express.static(path.join(__dirname, 'StoneCapImages')));
+
 app.use("/dist", express.static(path.join(__dirname, 'dist')));
 
 app.get('/', (req,res) => {

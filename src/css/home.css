@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display');
 
 body { 
-  background: url("../../StoneCapsImages/AboutUs1.jpg") no-repeat center center fixed; 
+  background: url("../../StoneCapImages/AboutUs1.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

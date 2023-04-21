@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './css/header.css';
 import {Link} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,8 +6,9 @@ import { faBagShopping } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 
-const Header = ({isLoggedIn, setIsLoggedIn}) => {
-
+const Header = () => {
+  const [ isLoggedIn, setIsLoggedIn ] = useState(window.localStorage.getItem('token'));
+  
   const handleSubmit = (event) => {
     event.preventDefault();
     setLoggedIn(false);
