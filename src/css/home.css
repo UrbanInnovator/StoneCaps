@@ -1,13 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Homemade+Apple');
-@import url('https://fonts.googleapis.com/css?family=Homemade+Apple');
+@import url('https://fonts.googleapis.com/css?family=Zeyada');
 @import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');
 @import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display');
-
-html {
-  overflow:auto;
-  height: 100%;
-  padding-bottom: 70px;
-}
 
 body { 
   background: url("../../StoneCapsImages/AboutUs1.jpg") no-repeat center center fixed; 
@@ -18,11 +12,40 @@ body {
 }
 
 #homediv {
+  height:100vh;
   display:flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   font-family: 'Just Another Hand';
+  padding-bottom: 60px;
+  padding-top:100px;
+}
+
+#foundersquote {
+  width:430px;
+  height:160px;
+  text-align: justify;
+  border-radius:10px;
+  border:2.5px solid white;
+  color:white;
+  font-weight: lighter;
+  font-size:27px;
+  backdrop-filter: blur(4px);
+  padding: 10px;
+  display:flex;
+  flex-flow: column;
+  justify-content: space-around;
+  margin: 30px;
+}
+
+#foundersquote #quote {
+  font-family: 'Zeyada';
+  font-size: 27px;
+}
+
+#foundersquote p {
+  margin:10px
 }
 
 .twobox {
@@ -33,25 +56,8 @@ body {
   margin-top: 50px;
 }
 
-#foundersquote {
-  text-align: justify;
-  border-radius:10px;
-  border:2.5px solid white;
-  color:white;
-  font-weight: lighter;
-  font-size:27px;
-  backdrop-filter: blur(4px);
-  margin-top:50px;
-  padding: 10px;
-}
-
-#foundersquote #quote {
-  font-family: 'Homemade Apple';
-  font-size: 18px;
-}
-
 .blurbs {
-  width:350px;
+  width:370px;
   height: fit-content;
   text-align: center;
   font-size: 28px;
