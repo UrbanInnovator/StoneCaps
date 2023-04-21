@@ -1,4 +1,5 @@
 const { client } = require("./index.js");
+const { createCart } = require("./cart.js");
 
 const createUser = async ({
     username,
@@ -12,6 +13,7 @@ const createUser = async ({
         ON CONFLICT (username) DO NOTHING
         RETURNING *;
     `, [username, password, isAdmin])
+        await createCart(user.id);
         return user;
     } catch (error) {
         throw error;
