@@ -29,7 +29,22 @@ const getAllCartItemsByCartId = async (cartId) => {
     }
 }
 
+const deleteCartItemById = async (cartItemId) => {
+    try {
+        const { rows: [deletedCartItem] } = await client.query(`
+            DELETE FROM cart_items
+            WHERE id = $1
+            RETURNING *;
+        `, [cartItemId]);
+        return deletedCartItem;
+    } catch (error) {
+        console.log(error);
+        throw error;
+    }
+}
+
 module.exports = {
     createCartItem,
-    getAllCartItemsByCartId
+    getAllCartItemsByCartId,
+    deleteCartItemById
 }

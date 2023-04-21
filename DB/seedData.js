@@ -21,7 +21,8 @@ const {
 
 const {
     createCartItem,
-    getAllCartItemsByCartId
+    getAllCartItemsByCartId,
+    deleteCartItemById
 } = require("./cartItems");
 
 const dropTables = async () => {
@@ -344,33 +345,59 @@ const testDB = async () => {
 
         console.log("Starting to test database...");
 
+    //getAllUser Test
+
         // console.log("Calling getAllUsers...");
         // const users = await getAllUsers();
         // console.log("Users Result:", users);
+
+    //getUser Test
 
         // console.log("Calling getUser...");
         // const user = await getUser("bob", "password");
         // console.log("User bob returned:", user);
 
+    //getUserById Test
+
         // console.log("Calling getUserById...");
         // const userById = await getUserById('2');
         // console.log("User lassy returned:", userById);
+
+    //getUserByUsername Test
 
         // console.log("Calling getUserByUsername for phillis...");
         // const userByUsername = await getUserByUsername('phillis');
         // console.log("User phillis returned:", userByUsername);
 
-        console.log("Calling getCartByUserId for bob...");
-        const cartByUserId = await getCartByUserId('1');
-        console.log("Bob's Cart Returned: ", cartByUserId);
+    //getCartByUserId Test
 
-        console.log("Calling getAllCartItemsByCartId for bob...");
-        const cartItemsByCartId = await getAllCartItemsByCartId('1');
-        console.log("All items in Bob's Cart Returned: ", cartItemsByCartId);
+        // console.log("Calling getCartByUserId for bob...");
+        // const cartByUserId = await getCartByUserId('1');
+        // console.log("Bob's Cart Returned: ", cartByUserId);
+
+    //getAllCartItemsByCartId Test
+
+        // console.log("Calling getAllCartItemsByCartId for bob...");
+        // const cartItemsByCartId = await getAllCartItemsByCartId('1');
+        // console.log("All items in Bob's Cart Returned: ", cartItemsByCartId);
+
+    //deleteCartItemsById Test
+
+        // console.log("Called deleteCartItemById...");
+        // console.log("Deleting first item in bob's cart (id: 1)...");
+        // const deletedCartItem = await deleteCartItemById(1);
+        // console.log("Item deleted: ", deletedCartItem);
+        // console.log("Calling getAllCartItemsByCartId for bob once more...");
+        // const cartItemsByCartIdTwo = await getAllCartItemsByCartId('1');
+        // console.log("All items in Bob's Cart Returned: ", cartItemsByCartIdTwo);
+
+    //getAllProducts Test
 
         // console.log("calling getAllProducts...");
         // const products = await getAllProducts();
         // console.log("Products Result:",  products);
+
+    //getProductsById Test
 
         // console.log("Calling getProductById...");
         // const productById = await getProductById('1');
