@@ -14,6 +14,11 @@ const {
     getProductById
 } = require("./products");
 
+const { 
+    createCart,
+    getCartByUserId
+} = require("./cart");
+
 const dropTables = async () => {
     try {
         console.log("Dropping All Tables...");
@@ -70,7 +75,8 @@ const createTables = async () => {
 
             CREATE TABLE cart (
                 id SERIAL PRIMARY KEY,
-                "userId" INTEGER REFERENCES users(id)
+                "userId" INTEGER REFERENCES users(id),
+                UNIQUE ("userId")
             );
 
             CREATE TABLE cart_items (
@@ -274,6 +280,22 @@ const createInitialProducts = async() => {
     }
 }
 
+const creatInitialCarts = async () => {
+    try {
+        console.log("Creating carts for all users...");
+        const cartUserOne = await createCart(1);
+        const cartUserTwo = await createCart(2);
+        const cartUserThree = await createCart(3);
+        console.log("Bob's cart returned: ", cartUserOne);
+        console.log("Lassy's cart returned: ", cartUserTwo);
+        console.log("Phillis's cart returned: ", cartUserThree);
+        console.log("Finished creating carts for all users...");
+    } catch (error) {
+        console.log(error);
+        throw error;
+    }
+}
+
 const createInitialOrders = async () => {
 
 }
@@ -286,6 +308,7 @@ const rebuildDB = async() => {
         await createTables();
         await createInitialUsers();
         await createInitialProducts();
+        await creatInitialCarts();
 
     } catch (error) {
         console.log("error rebuilding database");
@@ -306,12 +329,15 @@ const testDB = async() => {
         console.log("Calling getUserById...");
         const userById = await getUserById('2');
         console.log("User lassy returned:", userById);
-        console.log("Calling getUserByUsername...");
+        console.log("Calling getUserByUsername for phillis...");
         const userByUsername = await getUserByUsername('phillis');
         console.log("User phillis returned:", userByUsername);
-        console.log("calling getAllProducts...");
-        const products = await getAllProducts();
-        console.log("Products Result:",  products);
+        console.log("Calling getCartByUserId for bob...");
+        const cartByUserId = await getCartByUserId('1');
+        console.log("Bob's Cart Returned: ", cartByUserId);
+        // console.log("calling getAllProducts...");
+        // const products = await getAllProducts();
+        // console.log("Products Result:",  products);
         console.log("Calling getProductById...");
         const productById = await getProductById('1');
         console.log("Product 1 returned:", productById);
