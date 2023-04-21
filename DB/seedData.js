@@ -25,6 +25,16 @@ const {
     deleteCartItemById
 } = require("./cartItems");
 
+const {
+    createOrder,
+    getOrderById,
+    getAllOrdersByUserId
+} = require("./orders");
+
+const {
+    getAllOrderItemsByOrderId
+} = require("./orderItems");
+
 const dropTables = async () => {
     try {
         console.log("Dropping All Tables...");
@@ -69,14 +79,13 @@ const createTables = async () => {
                 id SERIAL PRIMARY KEY,
                 "userId" INTEGER REFERENCES users(id),
                 total float NOT NULL,
-                "orderedAt" timestamp NOT NULL
+                "orderedAt" TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
             );
 
             CREATE TABLE order_items (
                 id SERIAL PRIMARY KEY,
                 "orderId" INTEGER REFERENCES orders(id),
-                "productId" INTEGER REFERENCES products(id),
-                UNIQUE ("orderId")
+                "productId" INTEGER REFERENCES products(id)
             );
 
             CREATE TABLE cart (
@@ -371,15 +380,47 @@ const testDB = async () => {
 
     //getCartByUserId Test
 
-        // console.log("Calling getCartByUserId for bob...");
-        // const cartByUserId = await getCartByUserId('1');
-        // console.log("Bob's Cart Returned: ", cartByUserId);
+        console.log("Calling getCartByUserId for bob...");
+        const cartByUserId = await getCartByUserId('1');
+        console.log("Bob's Cart Returned: ", cartByUserId);
 
-    //getAllCartItemsByCartId Test
+    // getAllCartItemsByCartId Test
 
-        // console.log("Calling getAllCartItemsByCartId for bob...");
-        // const cartItemsByCartId = await getAllCartItemsByCartId('1');
-        // console.log("All items in Bob's Cart Returned: ", cartItemsByCartId);
+        console.log("Calling getAllCartItemsByCartId for bob...");
+        const cartItemsByCartId = await getAllCartItemsByCartId('1');
+        console.log("All items in Bob's Cart Returned: ", cartItemsByCartId);
+
+    // createOrder Test (must include previous two tests for cart)
+        
+        console.log("Calling createOrder for bobs cart...");
+        const productPricesInCart = await Promise.all(cartItemsByCartId.map(async (i) => {
+            const productById = await getProductById(i.productId);
+            return productById.price;
+        }));
+        const total = productPricesInCart.reduce((a, b) => a + b, 0);
+        const newOrder = await createOrder(1, total, 1);
+        console.log("Bobs order returned: ", newOrder);
+        console.log("Calling getAllCartItemsByCartId for bob...");
+        const cartItemsByCartIdTwo = await getAllCartItemsByCartId(1);
+        console.log("Bob's empty cart returned: ", cartItemsByCartIdTwo);
+    
+    //getOrderById Test
+
+        console.log("Calling getOrderById...");
+        const order = await getOrderById(1);
+        console.log("OrderById returned: ", order);
+
+    //getAllOrdersByUserId Test
+
+        console.log("Calling getAllOrdersByUserId...");
+        const orders = await getAllOrdersByUserId(1);
+        console.log("All Users Orders Returned: ", orders);
+
+    //getAllOrderItemsByOrderId Test
+        console.log("Calling getAllOrderItemsByOrderId...");
+        const orderItems = await getAllOrderItemsByOrderId(1);
+        console.log("All items in Bob's order returned: ", orderItems);
+
 
     //deleteCartItemsById Test
 
