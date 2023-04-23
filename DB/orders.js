@@ -2,10 +2,23 @@ const { client } = require("./index.js");
 const {
     getAllCartItemsByCartId
 } = require("./cartItems.js");
+const {
+    getProductById
+} = require("./products.js");
+const {
+    getCartByUserId
+} = require("./cart.js");
 
-const createOrder = async (userId, total, cartId) => {
+const createOrder = async (userId) => {
     try {
+        const cartByUserId = await getCartByUserId(userId);
+        const cartId = cartByUserId.id;
         const cartItems = await getAllCartItemsByCartId(cartId);
+        const productPricesInCart = await Promise.all(cartItems.map(async (i) => {
+            const productById = await getProductById(i.productId);
+            return productById.price;
+        }));
+        const total = productPricesInCart.reduce((a, b) => a + b, 0);
         const productIds = cartItems.map((i) => {
             return i.id;
         });
