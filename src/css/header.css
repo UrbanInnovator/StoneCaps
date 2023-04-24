@@ -5,34 +5,56 @@
 #headclan{
     display:flex;
     justify-content: space-around;
-    border: 3px solid white;
+    border: 3px solid  #493829;
     align-items: center;
+    background-color: #493829;
+    border-radius:10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    width:60%;
+    position:absolute;
 
 }
 
 #cart{
     width: 75px;
+    background-color: #493829;
+
 }
 
 #shop{
     width: 60px;
     height:60px;
-    color:white;
+    color:aqua;
+    background-color: #493829;
+
+    
 }
 
 #menu{
-    height:75px;
+    height:50px;
     width:50px;
-    background:none;
+    background-color: #493829;
+    border:0;
+    padding:0;
+    margin:0;
+    color:aqua;
+}
+
+#menuButton{
+    padding:0;
 }
 
 #login{
     padding:5px;
-    border:1px solid black;
+    border:1px solid white;
     border-radius: 5px;
     margin-top:20px;
     background-color:white;
     margin-bottom:25px;
+    color:aqua;
+    background-color: #493829;
+    
     
 }
 
@@ -40,4 +62,8 @@
     text-decoration: none;
     border: 2px solid white;
     padding: 10px;
+    font-family:'Sedgwick Ave Display';
+    border-radius:10px;
+    color:aqua;
+
 }
