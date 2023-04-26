@@ -4,7 +4,6 @@
 @import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display');
 
 #productbox {
-  position: absolute;
   display: flex;
   flex-flow:row;
   flex-wrap: wrap;
