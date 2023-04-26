@@ -1,5 +1,5 @@
 const express = require('express')
-const { getAllProducts } = require('../DB/products')
+const { getAllProducts, getProductById } = require('../DB/products')
 
 const router = express.Router();
 
@@ -11,6 +11,17 @@ router.get('/', async (req,res, next)=> {
         res.send(products);
     }catch(error){
         next(error);
+    }
+})
+
+//GET /api/products/:id
+router.get('/:id', async (req, res, next) => {
+    const productId = req.params.id;
+    try{
+        const product = getProductById(productId);
+        res.send(product);
+    }catch(err){
+        next(err);
     }
 })
 
