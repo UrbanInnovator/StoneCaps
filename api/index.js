@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const jwt = require('jsonwebtoken');
+const { JWT_SECRET } = process.env
 
 //middleware to insure the token is being passed approriatly
 router.use(async (req, res, next) => {
@@ -22,7 +23,7 @@ router.use(async (req, res, next) => {
         }
     } else {
         next({
-            name: "AthorizationHeaderError",
+            name: "AuthorizationHeaderError",
             message: `Authorization token must start with ${prefix}`
         });
     }
