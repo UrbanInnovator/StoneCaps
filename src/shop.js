@@ -21,6 +21,8 @@ const Shop = () => {
     getProducts();
   }, [])
 
+
+  
   return(
     <div id='productbox'>
       {
