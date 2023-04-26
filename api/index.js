@@ -1,5 +1,31 @@
 const express = require('express');
 const router = express.Router();
+const jwt = require('jsonwebtoken');
+
+router.use(async (req, res, next) => {
+    const prefix = 'Bearer ';
+    const auth = req.header('Authorization');
+
+    if (!auth) {
+        next()
+    } else if (auth.startsWith(prefix)) {
+        const token = auth.slice(prefix.length);
+        try {
+            const { id } = jwt.verify(token, JWT_SECRET);
+            if (id) {
+                req.user = await getUserById(id);
+                next();
+            }
+        } catch ({name, message}) {
+            next({name, message});
+        }
+    } else {
+        next({
+            name: "AthorizationHeaderError",
+            message: `Authorization token must start with ${prefix}`
+        });
+    }
+})
 
 // ROUTER: /api/products
 const productsRouter = require('./Products');
