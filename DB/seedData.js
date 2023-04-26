@@ -261,7 +261,7 @@ const createInitialProducts = async () => {
         await createProduct({
             name: "SciFiHat",
             description: "Blast off into outer space with this futuristic sci-fi helmet! Your pet rock will be ready to explore new galaxies and meet alien lifeforms with this sleek and high-tech helmet. Whether they're battling against the dark forces of the universe or just pretending to be an astronaut, this helmet is the perfect accessory for any space-loving pet rock.",
-            imageURL: "/StoneCapImages/SciFiHatjpg",
+            imageURL: "/StoneCapImages/SciFiHat.jpg",
             price: 11.38
         });
         await createProduct({
@@ -301,7 +301,7 @@ const createInitialProducts = async () => {
     }
 }
 
-const creatInitialCarts = async () => {
+const createInitialCarts = async () => {
     try {
         console.log("Creating carts for all users...");
         await createCart(1);
