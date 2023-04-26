@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import './css/home.css';
 
 const Home = () => {
-  const [ isLoggedIn, setIsLoggedIn ] = useState(window.localStorage.getItem('token'));
 
   return(
     <>

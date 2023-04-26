@@ -19,11 +19,14 @@ const Header = () => {
   return(
     <div id = "headclan">
 
-      <Link to='/shop'> <FontAwesomeIcon id='shop' icon={faBagShopping} /></Link>      
-      {!isLoggedIn ? <Link id='login' to='/login'>Login/Register</Link> : <button id= 'logout' onClick={handleSubmit}>Logout</button>}
+      <Link to='/shop' className="iconCon"> <FontAwesomeIcon className='icon' icon={faBagShopping} /></Link>      
+      {
+      !isLoggedIn ? 
+        <Link id='login' to='/login'>Sign In</Link> 
+        : <button id= 'logout' onClick={handleSubmit}>Logout</button>}
       <Link id='title' to='/'><h1>StoneCaps</h1></Link>
-      <Link to='/cart'>< FontAwesomeIcon id='cart' icon={faCartShopping} /></Link>
-      <button id='menuButton' type ='button'> <FontAwesomeIcon id ='menu' icon={faBars}/></button>
+      <Link to='/cart' className="iconCon">< FontAwesomeIcon className='icon' icon={faCartShopping} /></Link>
+      <button className="iconCon" type='button'> <FontAwesomeIcon className='icon' icon={faBars}/></button>
       
     </div>
   )
