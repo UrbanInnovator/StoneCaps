@@ -8,23 +8,23 @@ import Login from './login';
 import MyCart from './myCart'
 import Product from './product';
 import Shop from './shop';
+import './css/app.css';
 
 
 const App = () => {
-  const [ isLoggedIn, setIsLoggedIn ] = useState(window.localStorage.getItem('token'));
 
   return (
-    <>
-      {/* <Header /> */}
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/shop' element={<Shop/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/cart' element={<MyCart/>}/>
-        <Route path='/product' element={<Product/>}/>
-      </Routes>
+    <div id="app">
+      <Header />
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/shop' element={<Shop/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/cart' element={<MyCart/>}/>
+          <Route path='/productId' element={<Product/>}/>
+        </Routes>
       <Footer />
-    </>
+    </div>
   )
 }
 

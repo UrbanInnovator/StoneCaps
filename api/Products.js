@@ -1,5 +1,6 @@
 const express = require('express')
 const { getAllProducts } = require('../DB/products')
+
 const router = express.Router();
 
 
@@ -9,7 +10,7 @@ router.get('/', async (req,res, next)=> {
         const products = await getAllProducts();
         res.send(products);
     }catch(error){
-        next(err);
+        next(error);
     }
 })
 
