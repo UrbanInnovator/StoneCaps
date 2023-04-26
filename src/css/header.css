@@ -15,14 +15,16 @@
 }
 
 #cart{
-    width: 75px;
+    width: 45px;
+    height: 45px;
     background-color: #493829;
+    color:aqua;
 
 }
 
 #shop{
-    width: 60px;
-    height:60px;
+    width: 45px;
+    height: 45px;
     color:aqua;
     background-color: #493829;
 
@@ -30,17 +32,19 @@
 }
 
 #menu{
-    height:50px;
-    width:50px;
+    height:45px;
+    width: 45px;
     background-color: #493829;
     border:0;
     padding:0;
     margin:0;
     color:aqua;
+    
 }
 
 #menuButton{
     padding:0;
+    border-radius:10px;
 }
 
 #login{
@@ -59,9 +63,15 @@
 #title{
     text-decoration: none;
     border: 2px solid white;
-    padding: 10px;
+    padding-left: 75px;
+    padding-right: 75px;
     font-family:'Sedgwick Ave Display';
     border-radius:10px;
     color:aqua;
+    margin:0;
 
+}
+
+h1{
+    margin:0;
 }
