@@ -21,7 +21,7 @@ router.use(async (req, res, next) => {
         }
     } else {
         next({
-            name: "AthorizationHeaderError",
+            name: "AuthorizationHeaderError",
             message: `Authorization token must start with ${prefix}`
         });
     }
