@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router();
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
-const {getUserByUsername, createUser} = require('../DB/Users');
+const {getUser, getUserByUsername, createUser} = require('../DB/Users');
 
 dotenv.config();
 
@@ -38,7 +38,6 @@ router.post('/register', async(req, res, next) => {
 // GET /api/Users/login
 router.post('/login', async (req, res, next) => {
     const{ username, password } = req.body;
-    console.log(username, password);
     if (!username || !password) {
         next({
             name: "MissingCredentialsError",
@@ -46,9 +45,8 @@ router.post('/login', async (req, res, next) => {
         });
     }
     try{
-        const user = await getUserByUsername(username);
+        const user = await getUser(username, password);
         const token = jwt.sign(user, process.env.JWT_SECRET);
-        console.log("USER", user, "PASS", user.password, "TOKEN", token);
 
         if(user){
             console.log("good login");

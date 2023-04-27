@@ -44,6 +44,7 @@ const getUser = async (username, password) => {
             return;
         } else if (password != user.password) {
             console.log("Password Invalid!")
+            return;
         } else {
             delete user.password;
             return user;
