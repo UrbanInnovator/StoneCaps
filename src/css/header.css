@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');
 
 
-#headclan{
+#headclan {
     display:flex;
     justify-content: center;
     align-items: center;
@@ -44,7 +44,7 @@
     width: 35px;
 }
 
-#login{
+.log {
     padding:8px;
     text-decoration: none;
     border-radius: 10px;
@@ -69,6 +69,6 @@
     border-radius:10px;
 }
 
-h1{
+h1 {
     margin:0;
 }

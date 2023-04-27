@@ -18,13 +18,14 @@ router.post('/register', async(req, res, next) => {
                 message: `User ${username} is already taken.`
             });
         }else{
+            console.log("good register");
             const newUser = await createUser({username, password, isAdmin});
             const jsonToken = jwt.sign({
                 id: newUser.id,
                 username
             }, process.env.JWT_SECRET);
             res.send({
-                message: "Congratulations you are logged in!",
+                message: "Thanks for joining us!",
                 token: jsonToken,
                 user: newUser
             });
@@ -36,8 +37,8 @@ router.post('/register', async(req, res, next) => {
 
 // GET /api/Users/login
 router.post('/login', async (req, res, next) => {
-    const{ username, password} = req.body;
-
+    const{ username, password } = req.body;
+    console.log(username, password);
     if (!username || !password) {
         next({
             name: "MissingCredentialsError",
@@ -47,8 +48,10 @@ router.post('/login', async (req, res, next) => {
     try{
         const user = await getUserByUsername(username);
         const token = jwt.sign(user, process.env.JWT_SECRET);
+        console.log("USER", user, "PASS", user.password, "TOKEN", token);
 
-        if(user && user.password === password){
+        if(user){
+            console.log("good login");
             res.send({
                 user: user,
                 message: "you're logged in!",
