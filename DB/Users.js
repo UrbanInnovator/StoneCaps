@@ -38,16 +38,17 @@ const getUser = async (username, password) => {
     }
     try {
         const user = await getUserByUsername(username);
-        // const matchPasswords = await bcrypt.compare(password, user.password);
+        
 
         if (!user) {
             return;
+        } else if (password != user.password) {
+            console.log("Password Invalid!")
+            return;
+        } else {
+            delete user.password;
+            return user;
         }
-        // if (!matchPasswords) {
-        //     return;
-        // }
-        delete user.password;
-        return user;
     } catch (error) {
         throw error;
     }
@@ -80,7 +81,7 @@ const getUserByUsername = async (username) => {
     if(!user){
       return null;
     }
-    delete user.password;
+    
     return user;
     } catch (error) {
         throw error;
