@@ -12,18 +12,16 @@ import './css/app.css';
 
 
 const App = () => {
-  const [ singleProduct, setSingleProduct] = useState('');
 
   return (
     <div id="app">
       <Header />
         <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/shop' element={<Shop singleProduct={singleProduct} setSingleProduct={setSingleProduct}
-          />}/>
-          <Route path='/login' element={<Login/>}/>
-          <Route path='/cart' element={<MyCart/>}/>
-          <Route path='/:id' element={<Product singleProduct={singleProduct} setSingleProduct={setSingleProduct}/>}/>
+          <Route path='/' element={<Home />}/>
+          <Route path='/shop' element={<Shop />}/>
+          <Route path='/login' element={<Login />}/>
+          <Route path='/cart' element={<MyCart />}/>
+          <Route path='/:id' element={<Product />}/>
         </Routes>
       <Footer />
     </div>

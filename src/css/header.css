@@ -7,7 +7,6 @@
 #headclan{
     display:flex;
     justify-content: center;
-    border: 3px solid  #493829;
     align-items: center;
     background-color: #493829;
     border-radius:15px;
@@ -16,6 +15,7 @@
     width:70%;
     height:70px;
     position:sticky;
+    padding: 5px;
 }
 
 #headclan > * {

@@ -22,9 +22,9 @@ const Shop = () => {
   }, [])
 
 
-  
   return(
     <div id='productbox'>
+    <h1 id="shophead" >Shop</h1>
       {
         products.map((product, index) => {
           const productRoute = '/' + product.id;

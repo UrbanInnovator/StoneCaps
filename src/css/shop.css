@@ -3,6 +3,19 @@
 @import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');
 @import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display');
 
+#shophead {
+  color:#c4a389;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  width:100%;
+  font-family: 'Sedgwick Ave Display';
+  font-size: 50px;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  border-top: white 2px solid;
+  border-bottom: white 2px solid;
+}
+
 #productbox {
   display: flex;
   flex-flow:row;
@@ -30,21 +43,17 @@
   text-align: center;
   flex-basis: auto;
   margin: 7px;
-}
+} 
 
 #routine .titles {
   font-family:'Sedgwick Ave Display';
   font-size: 30px;
   text-decoration: none;
-  color:aqua;
+  color:#c4a389;
 }
 
 #routine .titles:hover {
   color:white;
-  border: 2px solid white;
-  border-radius: 10px;
-  margin: 1px;
-  padding:4px;
 }
 
 .pics {
@@ -62,17 +71,17 @@
 .addcart {
   width:fit-content;
   height:fit-content;
-  background-color: #493829;
-  border: 2px white solid;
+  background-color: white;
+  border:2px solid ;
   border-radius: 10px;
   font-family: 'Sedgwick Ave Display';
   font-size: 16px;
-  color:white;
+  color:#c4a389;
   align-self: flex-end;
-  padding:3px;
+  padding:8px;
 }
 
 .addcart:hover {
   background-color: #c4a389;
-  color:aqua;
+  color:white;
 }
