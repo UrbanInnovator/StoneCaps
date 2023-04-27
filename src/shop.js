@@ -21,8 +21,13 @@ const Shop = () => {
     getProducts();
   }, [])
 
+const shophead = {
+  color: ''
+}
+
   return(
     <div id='productbox'>
+    <h1 style={shophead}>Shop</h1>
       {
         products.map((product, index) => {
           const productRoute = '/' + product.id;
