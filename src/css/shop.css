@@ -3,6 +3,19 @@
 @import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');
 @import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display');
 
+#shophead {
+  color:#c4a389;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  width:100%;
+  font-family: 'Sedgwick Ave Display';
+  font-size: 50px;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  border-top: white 2px solid;
+  border-bottom: white 2px solid;
+}
+
 #productbox {
   display: flex;
   flex-flow:row;
