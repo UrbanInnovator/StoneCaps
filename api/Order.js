@@ -30,9 +30,10 @@ router.post ('/', async (req, res, next) => {
         const user = await req.user;
         const newOrder = await createOrder(user.id);
         res.send(newOrder);
-        
+
     } catch (error) {
         next({ error: error});
     }
 })
 
+module.exports = router;

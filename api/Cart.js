@@ -46,3 +46,5 @@ router.delete('/:cartItemId', async (req, res, next) => {
         next({ error: error});
     }
 })
+
+module.exports = router;
