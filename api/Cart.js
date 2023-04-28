@@ -15,7 +15,7 @@ router.get('/', async (req, res, next) => {
         const user = await req.user;
         const cart = await getCartByUserId(user.id);
         const cartItems = await getAllCartItemsByCartId(cart.id);
-        res.send(cart, cartItems);
+        res.send(cartItems);
 
     } catch (error) {
         next({ error: error});

@@ -23,6 +23,18 @@ router.post ('/', async (req, res, next) => {
     }
 })
 
+// GET /api/order/:orderId
+router.post ('/', async (req, res, next) => {
+    try {
+        const { orderId } = req.params;
+        const order = await getOrderById(orderId);
+        res.send(order);
+
+    } catch (error) {
+        next({ error: error});
+    }
+})
+
 // POST /api/order
 
 router.post ('/', async (req, res, next) => {
