@@ -25,12 +25,26 @@ const Product = () => {
   return(
     <div id = "Bio">
       {
-        <img className='pics' src={product.imageURL} />
-        
-      }
+        <>
+        <div id= 'singleimg'>
+        <img className='singlepic' src={product.imageURL} />
+        </div>
 
+        <div id = 'lifestory'>
+        <h4 className='title'>Name: {product.name}</h4>
+        <h4 className="singleprice">Price: {product.price}</h4>
+        </div>
+
+        <div id = 'Singleaddcart'>
+        <h4 className='Backstory'>Backstory: {product.description}</h4>
+        <button className='addcart'>Add To Cart</button>
+        </div>
+        </>
+
+      }
     </div>
   )
 }
+
 
 export default Product;
