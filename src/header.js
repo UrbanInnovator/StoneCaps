@@ -3,8 +3,9 @@ import './css/header.css';
 import {Link} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBagShopping } from '@fortawesome/free-solid-svg-icons';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { faMountain } from '@fortawesome/free-solid-svg-icons';
+
 
 
 const Header = () => {
@@ -26,8 +27,8 @@ const Header = () => {
         : <button  className='log' onClick={logOut}>Logout</button>}
       <Link id='title' to='/'><h1>StoneCaps</h1></Link>
       <Link to='/cart' className="iconCon">< FontAwesomeIcon className='icon' icon={faCartShopping} /></Link>
-      <button className="iconCon" type='button'> <FontAwesomeIcon className='icon' icon={faBars}/></button>
-      
+      <a href='https://www.petrock.com' className="iconCon"> <FontAwesomeIcon className='icon' icon={faMountain}/></a>
+
     </div>
   )
 }
