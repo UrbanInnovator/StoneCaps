@@ -12,7 +12,7 @@ const {
 } = require('../DB/orderItems.js')
 
 // GET /api/order
-router.post ('/', async (req, res, next) => {
+router.get ('/', async (req, res, next) => {
     try {
         const user = await req.user;
         const orders = await getAllOrdersByUserId(user.id);
@@ -24,7 +24,7 @@ router.post ('/', async (req, res, next) => {
 })
 
 // GET /api/order/:orderId
-router.post ('/:orderId', async (req, res, next) => {
+router.get ('/:orderId', async (req, res, next) => {
     const { orderId } = req.params;
 
     try {
