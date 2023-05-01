@@ -1,17 +1,17 @@
 //Displays the shop itself
 import React, { useState, useEffect } from "react";
 import {Link} from 'react-router-dom'
-import axios from "axios";
+import Axios from "axios";
 import './css/shop.css';
 
 const Shop = () => {
   const [ products, setProducts ] = useState([]);
-  const [ isLoggedIn, setIsLoggedIn ] = useState(window.localStorage.getItem('token'));
+  const [ isLoggedIn, setIsLoggedIn ] = useState(window.localStorage.getItem('stoken'));
 
   useEffect(() => {
     const getProducts = async() => {
       try{
-        const response = await axios.get('/api/products/');
+        const response = await Axios.get('/api/products/');
         setProducts(response.data);
         console.log(response.data);
       }catch(error) {
@@ -20,6 +20,36 @@ const Shop = () => {
     }
     getProducts();
   }, [])
+
+  const addToCart = async (event) => {
+    event.preventDefault();
+    console.log(event.target.id);
+    try {
+      const config = {
+        headers: {
+          'Authorization': `Bearer ${window.localStorage.getItem('stoken')}`
+        }
+      }
+
+      const body = {
+        product: {
+          id: event.target.id,
+          quantity: 1,
+        }
+      }
+      console.log(config);
+      Axios.post(
+        '/api/cart/', 
+        body, 
+        config
+        ).then(console.log)
+
+    }catch(err){
+      console.log(err);
+    }
+
+  }
+  
 
 
   return(
@@ -33,7 +63,7 @@ const Shop = () => {
               <img className='pics' src={product.imageURL} />
               <Link to={productRoute} className='titles'>{product.name}</Link>
               <h4 className="price">Price: {product.price}</h4>
-              <button className='addcart'>Add To Cart</button>
+              <button id={product.id} onClick={addToCart} className='addcart'>Add To Cart</button>
             </div>
           )
         })
