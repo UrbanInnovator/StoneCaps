@@ -1,0 +1,40 @@
+#cartbox {
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#carthead {
+  color:#c4a389;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  width:100%;
+  font-family: 'Sedgwick Ave Display';
+  font-size: 50px;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  border-top: white 2px solid;
+  border-bottom: white 2px solid;
+}
+
+.item {
+  display:flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: baseline;
+}
+
+.cartitem {
+  width: 40px;
+  height: 40px;
+}
+
+.middiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
