@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const jwt = require('jsonwebtoken');
-const { JWT_SECRET } = process.env
+const {getUserById} = require('../DB/Users');
 
 //middleware to insure the token is being passed approriatly
 router.use(async (req, res, next) => {
@@ -13,9 +13,9 @@ router.use(async (req, res, next) => {
     } else if (auth.startsWith(prefix)) {
         const token = auth.slice(prefix.length);
         try {
-            const { id } = jwt.verify(token, JWT_SECRET);
-            if (id) {
-                req.user = await getUserById(id);
+            const verifiedToken = jwt.verify(token, process.env["JWT_SECRET"]);
+            if (verifiedToken.id) {
+                req.user = await getUserById(verifiedToken.id);
                 next();
             }
         } catch ({name, message}) {
@@ -36,6 +36,10 @@ router.use('/products', productsRouter);
 // ROUTER: /api/users
 const usersRouter = require('./Users');
 router.use('/users', usersRouter);
+
+// ROUTER: /api/cart
+const cartRouter = require('./Cart')
+router.use('/cart', cartRouter);
 
 router.use((error, req, res, next) => {
     res.send({
