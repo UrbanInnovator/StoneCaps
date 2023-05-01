@@ -18,12 +18,9 @@ router.post('/register', async(req, res, next) => {
                 message: `User ${username} is already taken.`
             });
         }else{
-            console.log("good register");
             const newUser = await createUser({username, password, isAdmin});
-            const jsonToken = jwt.sign({
-                id: newUser.id,
-                username
-            }, process.env.JWT_SECRET);
+            console.log("good register", newUser);
+            const jsonToken = jwt.sign(newUser, process.env.JWT_SECRET);
             res.send({
                 message: "Thanks for joining us!",
                 token: jsonToken,
