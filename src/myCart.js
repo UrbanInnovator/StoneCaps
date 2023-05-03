@@ -38,6 +38,7 @@ const MyCart = () => {
     try {
       const response = await axios.delete(`api/cart/${id}`);
       console.log(response);
+      window.location.reload();
       return(response.data);
     }catch(error) {
       console.log(error);
