@@ -9,15 +9,16 @@ const {
     deleteCartItemById
 
 } = require('../DB/cartItems.js')
+const { getProductById } = require('../DB/products')
 //GET /api/cart
+
 router.get('/', async (req, res, next) => {
     try{
         const user = await req.user;
         const cart = await getCartByUserId(user.id);
         const cartItems = await getAllCartItemsByCartId(cart.id);
-        console.log("CARTITEMS", cartItems, "USER", user);
+        console.log("CARTITEMS", cartItems);
         res.send(cartItems);
-
     } catch (error) {
         next({ error: error});
     }
@@ -44,7 +45,10 @@ router.delete('/:cartItemId', async (req, res, next) => {
     const { cartItemId } = req.params;
     
     try {
-        const deletedCartItem = await deleteCartItemById(cartItemId);
+        const item = await getProductById(cartItemId);
+        console.log("ITEM", item);
+        const deletedCartItem = await deleteCartItemById(item.id);
+        console.log("DELETE", deletedCartItem);
         res.send(deletedCartItem);
         
     } catch (error) {

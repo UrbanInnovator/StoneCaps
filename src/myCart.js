@@ -1,10 +1,12 @@
 //Shows the customer's shopping cart & order total
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import './css/cart.css';
 
 const MyCart = () => {
   const [ cartItems, setCartItems ] = useState([]);
+  const [ checkout, setCheckout ] = useState(false);
 
 
   useEffect(() => {
@@ -24,28 +26,51 @@ const MyCart = () => {
     }
     getCart();
   }, [])
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    const itemId = e.target.id ;
+
+    deleteItem(itemId);
+  }
+
+  const deleteItem = async(id) => {
+    try {
+      const response = await axios.delete(`api/cart/${id}`);
+      console.log(response);
+      return(response.data);
+    }catch(error) {
+      console.log(error);
+    }
+  }
   
   return(
     <div id='cartbox'>
     <h1 id="carthead" >Cart</h1>
       {
-        console.log(cartItems)
-        // cartItems != null ?
-        // cartItems.map((cartitem, index) => {
-        //   return(
-        //     <div className='item' key={index}>
-        //       {/* <img src={} className="cartpic"/> */}
-        //       <div className="middiv">
-        //         <h3 className="name"></h3>
-        //         <h3 className="price">$</h3>
-        //       </div>
-        //       <div className="buttdiv">
-        //         <button className="butts">Remove</button>
-        //       </div>
-        //     </div>
-        //   )
-        // }) :
-        // <h1 id="carthead">Loading Cart...</h1>
+        checkout != true ?
+        cartItems.map((cartItem, index) => {
+          const productRoute = '/' + cartItem.id;
+          const id = cartItem.id;
+          return(
+            <div className='item' key={index}>
+              <img className='cartpic' src={cartItem.imageURL} />
+              <div className="middiv">
+                <Link to={productRoute} className="name">{cartItem.name}</Link>
+                <h3 className="price">${cartItem.price}</h3>
+              </div>
+              <div className="buttdiv">
+                <button id={id}onClick={handleClick} className="butts">Remove</button>
+              </div>
+            </div>
+          )
+        }) :
+        <h1 id="checkout">Thank you for your business!!</h1>
+      }
+      {
+        checkout != true ?
+        <button className="checkbutt" onClick={() => {setCheckout(true)}}>Checkout</button>
+        : null
       }
     </div>
   )
