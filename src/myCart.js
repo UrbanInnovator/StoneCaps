@@ -51,7 +51,7 @@ const MyCart = () => {
       {
         checkout != true ?
         cartItems.map((cartItem, index) => {
-          const productRoute = '/' + cartItem.id;
+          const productRoute = '/' + cartItem.productId;
           const id = cartItem.id;
           return(
             <div className='item' key={index}>
