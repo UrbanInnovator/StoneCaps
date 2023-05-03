@@ -15,6 +15,7 @@ router.get('/', async (req, res, next) => {
         const user = await req.user;
         const cart = await getCartByUserId(user.id);
         const cartItems = await getAllCartItemsByCartId(cart.id);
+        console.log("CARTITEMS", cartItems, "USER", user);
         res.send(cartItems);
 
     } catch (error) {
@@ -30,8 +31,7 @@ router.post('/', async (req, res, next) => {
         console.log("api/cart product", product);
         const cart = await getCartByUserId(user.id);
         const newCartItem = await createCartItem(product.productId, cart.id, product.quantity);
-        console.log("cart", cart)
-        console.log("newcart", newCartItem)
+        console.log("CART:", cart, "NEWCART-ITEM:", newCartItem);
         res.send(newCartItem);
 
     } catch (error) {
