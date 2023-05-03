@@ -30,8 +30,9 @@ router.post('/', async (req, res, next) => {
         const { product } = req.body;
         console.log("api/cart product", product);
         const cart = await getCartByUserId(user.id);
-        const newCartItem = await createCartItem(product.productId, cart.id, product.quantity);
-        console.log("CART:", cart, "NEWCART-ITEM:", newCartItem);
+        const newCartItem = await createCartItem(product.id, cart.id, product.quantity);
+        console.log("cart", cart)
+        console.log("newcart", newCartItem)
         res.send(newCartItem);
 
     } catch (error) {

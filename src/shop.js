@@ -33,7 +33,7 @@ const Shop = () => {
 
       const body = {
         product: {
-          id: event.target.id,
+          id: parseInt(event.target.id),
           quantity: 1,
         }
       }
