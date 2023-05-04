@@ -37,7 +37,7 @@ const Shop = () => {
           quantity: 1,
         }
       }
-      console.log(config);
+      // console.log(config);
       Axios.post(
         '/api/cart/', 
         body, 

@@ -18,9 +18,11 @@ const createCartItem = async (productId, cartId, quantity) => {
 const getAllCartItemsByCartId = async (cartId) => {
     try {
         const { rows: cartItems } = await client.query(`
-            SELECT *
+            SELECT cart_items.*, products.name, products.description, products.price, products."imageURL"
             FROM cart_items
-            WHERE "cartId" = $1
+            JOIN products
+            ON cart_items."productId" = products.id
+            WHERE cart_items."cartId" = $1
         `, [cartId]);
         return cartItems;
     } catch (error) {
