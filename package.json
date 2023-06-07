@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/TheMatrixs/StoneCaps#readme",
   "dependencies": {
+    "@babel/core": "^7.22.1",
     "@babel/preset-react": "^7.18.6",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
